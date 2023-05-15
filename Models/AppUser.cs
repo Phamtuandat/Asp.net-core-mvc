@@ -1,6 +1,9 @@
 using Microsoft.AspNetCore.Identity;
-
-public class AppUser : IdentityUser
+namespace App.Models
 {
-
+    public class AppUser : IdentityUser
+    {
+        public DateOnly? BirthDate { get; internal set; }
+        public string? HomeAdress { get; internal set; } = string.Empty;
+    }
 }

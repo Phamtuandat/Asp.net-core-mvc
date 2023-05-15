@@ -276,3 +276,4 @@ D:\ASP.NET-project\MVC\obj\Debug\net7.0\refint\MVC.dll
 D:\ASP.NET-project\MVC\obj\Debug\net7.0\MVC.pdb
 D:\ASP.NET-project\MVC\obj\Debug\net7.0\MVC.genruntimeconfig.cache
 D:\ASP.NET-project\MVC\obj\Debug\net7.0\ref\MVC.dll
+D:\ASP.NET-project\MVC\bin\Debug\net7.0\libman.json
