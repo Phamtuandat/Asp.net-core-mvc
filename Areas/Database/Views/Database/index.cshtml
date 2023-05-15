@@ -1,4 +1,5 @@
 @using Microsoft.EntityFrameworkCore
+@using App.Data
 @inject AppDbContext _context;
 @{
       var connect = _context.Database.GetDbConnection();
@@ -7,6 +8,7 @@
       var canconnect = _context.Database.CanConnect();
 }
 <partial name="_AlertMessage" />
+
 <p>
       -Database name: @dbName
 </p>
@@ -62,4 +64,5 @@
             }
       </ul>
       <a class="btn btn-danger mt-2" asp-action="DeleteDb">Delete Database: @dbName</a>
+      <a class="btn btn-outline-success mt-2" asp-action="SeedData">Seed Data</a>
 }

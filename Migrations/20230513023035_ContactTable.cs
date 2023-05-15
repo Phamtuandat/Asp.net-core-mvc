@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace MVC.Migrations
+namespace App.Migrations
 {
     /// <inheritdoc />
     public partial class ContactTable : Migration
