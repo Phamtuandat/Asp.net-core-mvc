@@ -1,9 +1,9 @@
 @using App.Areas.Identity.Models.RoleViewModels
 
 @model EditRoleModel
- 
+
 @{
-    ViewData["Title"] = "Cập nhật role";
+    ViewData["Title"] = "Update Role";
 }
 <h2>@ViewData["Title"]</h2>
 <partial name="_AlertMessage"></partial>
@@ -20,14 +20,14 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
 
-            <div class="form-group">
-                <input type="submit" value="Cập nhật" class="btn btn-primary" />
-                <a class="btn btn-primary" asp-action="Index">Danh sách các role</a>
+            <div class="form-group mt-3">
+                <input type="submit" value="Update" class="btn btn-primary" />
+                <a class="btn btn-primary" asp-action="Index">list of roles</a>
             </div>
         </form>
         <hr>
-        <p>Các đặc tính  (claim) của role:
-            <a asp-action="AddRoleClaim" asp-route-roleid="@Model.Role.Id">+ Thêm claim</a>
+        <p>Role's (claim):
+            <a asp-action="AddRoleClaim" asp-route-roleid="@Model.Role.Id">+ Add claim</a>
         </p>
         @if (Model.Claims.Count > 0)
         {
@@ -36,9 +36,9 @@
                 {
                     <li>
                         <a asp-action="EditRoleClaim" asp-route-claimid="@claim.Id">
-                            @claim.ClaimType  : @claim.ClaimValue
+                            @claim.ClaimType : @claim.ClaimValue
                         </a>
-                        
+
 
                     </li>
                 }
@@ -49,5 +49,5 @@
 
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
