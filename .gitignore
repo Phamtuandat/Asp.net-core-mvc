@@ -1,5 +1,4 @@
 /appsettings.json
-/Migrations
 /bin
 /ScaffoldingReadMe.txt
 obj/Debug/net7.0/MVC.GeneratedMSBuildEditorConfig.editorconfig
@@ -7,3 +6,4 @@ obj/Debug/net7.0/MVC.assets.cache
 obj/Debug/
 /obj/
 /obj
+/obj/Debug
