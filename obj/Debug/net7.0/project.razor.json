@@ -16565,6 +16565,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Details.cshtml",
+      "TargetPath": "Views\\Blog\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Account\\ForgotPasswordConfirmation.cshtml",
       "FileKind": "mvc"
@@ -16582,6 +16587,11 @@
     {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Role\\Index.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Role\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Blog\\Index.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Blog\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16655,8 +16665,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\User\\AddClaim.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\User\\AddClaim.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Create.cshtml",
+      "TargetPath": "Views\\Blog\\Create.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16680,6 +16700,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Blog\\Details.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Blog\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -16692,6 +16717,16 @@
     {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Contact\\Views\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Contact\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Blog\\Delete.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Blog\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Edit.cshtml",
+      "TargetPath": "Views\\Blog\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16750,6 +16785,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Blog\\Create.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Blog\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Account\\SendCode.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Account\\SendCode.cshtml",
       "FileKind": "mvc"
@@ -16767,6 +16807,11 @@
     {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Manage\\ChangePassword.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Manage\\ChangePassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Delete.cshtml",
+      "TargetPath": "Views\\Blog\\Delete.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16800,6 +16845,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Index.cshtml",
+      "TargetPath": "Views\\Blog\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Shared\\_MenuManagePartial.cshtml",
       "TargetPath": "Views\\Shared\\_MenuManagePartial.cshtml",
       "FileKind": "mvc"
@@ -16807,6 +16857,11 @@
     {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Manage\\VerifyPhoneNumber.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Manage\\VerifyPhoneNumber.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -16842,6 +16897,11 @@
     {
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\User\\SetPassword.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\User\\SetPassword.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Blog\\Edit.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Blog\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
