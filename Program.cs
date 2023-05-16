@@ -16,50 +16,50 @@ builder.Services.AddScoped<IEmailSender, SendMailService>();
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
 builder.Services.Configure<IdentityOptions>(options =>
 {
-      // Password settings.
-      options.Password.RequireDigit = true;
-      options.Password.RequireLowercase = true;
-      options.Password.RequireNonAlphanumeric = true;
-      options.Password.RequireUppercase = true;
-      options.Password.RequiredLength = 6;
-      options.Password.RequiredUniqueChars = 1;
+    // Password settings.
+    options.Password.RequireDigit = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireNonAlphanumeric = true;
+    options.Password.RequireUppercase = true;
+    options.Password.RequiredLength = 6;
+    options.Password.RequiredUniqueChars = 1;
 
-      // Lockout settings.
-      options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
-      options.Lockout.MaxFailedAccessAttempts = 5;
-      options.Lockout.AllowedForNewUsers = true;
+    // Lockout settings.
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.AllowedForNewUsers = true;
 
-      // User settings.
-      options.User.AllowedUserNameCharacters =
-      "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
-      options.User.RequireUniqueEmail = false;
+    // User settings.
+    options.User.AllowedUserNameCharacters =
+    "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+    options.User.RequireUniqueEmail = false;
 });
 
 builder.Services.ConfigureApplicationCookie(options =>
 {
-      // Cookie settings
-      options.Cookie.HttpOnly = true;
-      options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
+    // Cookie settings
+    options.Cookie.HttpOnly = true;
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(5);
 
-      options.AccessDeniedPath = "/AccessDenied";
-      options.SlidingExpiration = true;
+    options.AccessDeniedPath = "/AccessDenied";
+    options.SlidingExpiration = true;
 });
 builder.Services
         .AddAuthentication()
         .AddGoogle(option =>
         {
-              var gconfig = builder.Configuration.GetSection("Authentication:Google");
-              option.ClientId = gconfig["ClientId"];
-              option.ClientSecret = gconfig["ClientSecrect"];
-              option.CallbackPath = "/login-with-google";
+            var gconfig = builder.Configuration.GetSection("Authentication:Google");
+            option.ClientId = gconfig["ClientId"];
+            option.ClientSecret = gconfig["ClientSecrect"];
+            option.CallbackPath = "/login-with-google";
         });
 builder.Services.AddAuthorization(option =>
 {
-      option.AddPolicy("ViewManageMenu", policy =>
-      {
-            policy.RequireAuthenticatedUser();
-            policy.RequireRole(RoleNames.Administrator);
-      });
+    option.AddPolicy("ViewManageMenu", policy =>
+    {
+        policy.RequireAuthenticatedUser();
+        policy.RequireRole(RoleNames.Administrator);
+    });
 });
 
 var app = builder.Build();
@@ -67,9 +67,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-      app.UseExceptionHandler("/Home/Error");
-      // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-      app.UseHsts();
+    app.UseExceptionHandler("/Home/Error");
+    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseHsts();
 }
 
 app.AddStatusCodePage();
