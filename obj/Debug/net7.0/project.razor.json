@@ -16555,6 +16555,14 @@
   "RootNamespace": "MVC",
   "Documents": [
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Delete.cshtml",
+      "TargetPath": "Views\\Blog\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Account\\ExternalLoginFailure.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Account\\ExternalLoginFailure.cshtml",
       "FileKind": "mvc"
@@ -16635,6 +16643,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Index.cshtml",
+      "TargetPath": "Views\\Blog\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Database\\Views\\_ViewStart.cshtml",
       "TargetPath": "Areas\\Database\\Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -16680,6 +16696,7 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\_ViewImports.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\_ViewImports.cshtml",
       "FileKind": "mvc"
@@ -16700,6 +16717,38 @@
       "FileKind": "mvc"
     },
     {
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Create.cshtml",
+      "TargetPath": "Views\\Blog\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Identity\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\User\\AddClaim.cshtml",
+      "TargetPath": "Areas\\Identity\\Views\\User\\AddClaim.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Category\\Index.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Category\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Manage\\AddPhoneNumber.cshtml",
+      "TargetPath": "Areas\\Identity\\Views\\Manage\\AddPhoneNumber.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Manage\\EditProfile.cshtml",
+      "TargetPath": "Areas\\Identity\\Views\\Manage\\EditProfile.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Account\\Error.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Account\\Error.cshtml",
       "FileKind": "mvc"
@@ -16735,6 +16784,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Details.cshtml",
+      "TargetPath": "Views\\Blog\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Account\\AccessDenied.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Account\\AccessDenied.cshtml",
       "FileKind": "mvc"
@@ -16765,6 +16822,14 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Category\\Delete.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Category\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Database\\Views\\Database\\DeleteDb.cshtml",
       "TargetPath": "Areas\\Database\\Views\\Database\\DeleteDb.cshtml",
       "FileKind": "mvc"
@@ -16775,16 +16840,40 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\_ViewImports.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Account\\UseRecoveryCode.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Account\\UseRecoveryCode.cshtml",
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Category\\Create.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Category\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Account\\SendCode.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Account\\SendCode.cshtml",
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\_ViewStart.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Database\\Views\\Database\\index.cshtml",
       "TargetPath": "Areas\\Database\\Views\\Database\\index.cshtml",
       "FileKind": "mvc"
@@ -16805,16 +16894,40 @@
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Category\\Details.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Category\\Details.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Home\\Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Views\\Blog\\Edit.cshtml",
+      "TargetPath": "Views\\Blog\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\User\\Index.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\User\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
+<<<<<<< HEAD
+=======
+      "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Blog\\Views\\Category\\Edit.cshtml",
+      "TargetPath": "Areas\\Blog\\Views\\Category\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+>>>>>>> master
       "FilePath": "d:\\ASP.NET-project\\MVC\\Areas\\Identity\\Views\\Manage\\Error.cshtml",
       "TargetPath": "Areas\\Identity\\Views\\Manage\\Error.cshtml",
       "FileKind": "mvc"

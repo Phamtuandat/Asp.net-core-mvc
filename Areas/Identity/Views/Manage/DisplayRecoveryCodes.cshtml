@@ -1,4 +1,4 @@
-﻿@model App.Areas.Identity.Models.DisplayRecoveryCodesViewModel
+﻿@model DisplayRecoveryCodesViewModel
 @{
     ViewData["Title"] = "Recovery Codes";
 }
@@ -14,9 +14,9 @@
         <dt>Codes:</dt>
         @foreach (var code in Model.Codes)
         {
-        <dd>
-            <text>@code</text>
-        </dd>
+            <dd>
+                <text>@code</text>
+            </dd>
         }
     </dl>
 </div>

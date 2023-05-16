@@ -1,16 +1,7 @@
-﻿@using Microsoft.AspNetCore.Identity
-@using App.Models
-@model App.Areas.Identity.Models.LoginViewModel
+﻿@model LoginViewModel
 @inject SignInManager<AppUser> SignInManager
 
 @{
-
-
-
-
-
-
-
     ViewData["Title"] = "Login";
 }
 
@@ -66,9 +57,6 @@
             <h4>Sigin with account.</h4>
             <hr />
             @{
-
-
-
                 var schemes = await SignInManager.GetExternalAuthenticationSchemesAsync();
                 var loginProviders = schemes.ToList();
                 if (loginProviders.Count == 0)
@@ -78,9 +66,6 @@
                             This application not already support Sigin with External Login
                         </p>
                     </div>
-
-
-
                 }
                 else
                 {
@@ -89,22 +74,13 @@
                         <div>
                             <p>
                                 @foreach (var provider in loginProviders)
-
-
-
                                 {
                                     <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name"
                                 title="Log in using your @provider.Name account">@provider.Name</button>
-
-
-
                                 }
                             </p>
                         </div>
                     </form>
-
-
-
                 }
             }
         </section>

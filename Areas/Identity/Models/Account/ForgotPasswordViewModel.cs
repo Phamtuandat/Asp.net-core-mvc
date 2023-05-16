@@ -3,7 +3,7 @@
 
 using System.ComponentModel.DataAnnotations;
 
-namespace App.Areas.Identity.Models
+namespace App.Areas.Identity.Models.AccountViewModels
 {
     public class ForgotPasswordViewModel
     {
