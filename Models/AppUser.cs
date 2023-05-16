@@ -3,7 +3,7 @@ namespace App.Models
 {
     public class AppUser : IdentityUser
     {
-        public DateOnly? BirthDate { get; internal set; }
-        public string? HomeAdress { get; internal set; } = string.Empty;
+        public DateOnly? BirthDate { get; set; }
+        public string? HomeAdress { get; set; } = string.Empty;
     }
 }

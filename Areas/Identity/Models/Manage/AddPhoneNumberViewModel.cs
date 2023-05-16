@@ -8,6 +8,6 @@ namespace App.Areas.Identity.Models.ManageViewModel
         [Required]
         [Phone]
         [Display(Name = "Phone Number")]
-        public string PhoneNumber { get; set; }
+        public string PhoneNumber { get; set; } = string.Empty;
     }
 }
