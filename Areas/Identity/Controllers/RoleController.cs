@@ -34,7 +34,7 @@ namespace App.Areas.Identity.Controllers
         }
 
         [TempData]
-        public string StatusMessage { get; set; } = string.Empty;
+        public string Message { get; set; } = string.Empty;
 
         //
         // GET: /Role/Index
@@ -60,7 +60,7 @@ namespace App.Areas.Identity.Controllers
 
             return View(roles);
         }
-        
+
         // GET: /Role/Create
         [HttpGet]
         public IActionResult Create()
@@ -82,7 +82,7 @@ namespace App.Areas.Identity.Controllers
             var result = await _roleManager.CreateAsync(newRole);
             if (result.Succeeded)
             {
-                StatusMessage = $"Bạn vừa tạo role mới: {model.Name}";
+                Message = $"Bạn vừa tạo role mới: {model.Name}";
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -118,7 +118,7 @@ namespace App.Areas.Identity.Controllers
 
             if (result.Succeeded)
             {
-                StatusMessage = $"Deleted: {role.Name}";
+                Message = $"Deleted: {role.Name}";
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -169,7 +169,7 @@ namespace App.Areas.Identity.Controllers
 
             if (result.Succeeded)
             {
-                StatusMessage = $"You just renamed: {model.Name}";
+                Message = $"You just renamed: {model.Name}";
                 return RedirectToAction(nameof(Index));
             }
             else
@@ -228,7 +228,7 @@ namespace App.Areas.Identity.Controllers
                 return View(model);
             }
 
-            StatusMessage = "A new claim is created successfully";
+            Message = "A new claim is created successfully";
 
             return RedirectToAction("Edit", new { roleid = role.Id });
 
@@ -285,7 +285,7 @@ namespace App.Areas.Identity.Controllers
 
             await _context.SaveChangesAsync();
 
-            StatusMessage = "claims is just updated";
+            Message = "claims is just updated";
 
             return RedirectToAction("Edit", new { roleid = role.Id });
         }
@@ -313,7 +313,7 @@ namespace App.Areas.Identity.Controllers
 
             await _roleManager.RemoveClaimAsync(role, new Claim(claim.ClaimType, claim.ClaimValue));
 
-            StatusMessage = "Claim has been removed";
+            Message = "Claim has been removed";
 
 
             return RedirectToAction("Edit", new { roleid = role.Id });
