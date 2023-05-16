@@ -3,7 +3,7 @@
 using Microsoft.AspNetCore.Identity;
 
 
-namespace App.Areas.Identity.Models
+namespace App.Areas.Identity.Models.ManageViewModel
 {
     public class IndexViewModel
     {

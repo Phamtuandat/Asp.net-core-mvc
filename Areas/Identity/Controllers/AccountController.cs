@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.WebUtilities;
 using App.Models;
 using App.Services;
 using App.Utilities;
+using App.Areas.Identity.Models.AccountViewModels;
 using App.Areas.Identity.Models;
 
 namespace App.Areas.Identity.Controllers

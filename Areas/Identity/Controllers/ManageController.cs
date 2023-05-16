@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using App.Models;
 using App.Services;
-using App.Areas.Identity.Models;
+using App.Areas.Identity.Models.ManageViewModel;
 
 namespace App.Areas.Identity.Controllers
 {

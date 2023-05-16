@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace App.Areas.Identity.Models
+namespace App.Areas.Identity.Models.ManageViewModel
 {
     public class EditExtraProfileModel
     {

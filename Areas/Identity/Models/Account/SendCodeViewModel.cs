@@ -2,7 +2,7 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 
 using Microsoft.AspNetCore.Mvc.Rendering;
-namespace App.Areas.Identity.Models
+namespace App.Areas.Identity.Models.AccountViewModels
 {
     public class SendCodeViewModel
     {
