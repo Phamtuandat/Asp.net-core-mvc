@@ -52,15 +52,17 @@ namespace MVC.Areas.Blog.Controllers
 
             return View(category);
         }
-        private void CreateSelectItem(List<Category> source, List<Category> des, int level)
+        private void CreateSelectItem(List<Category> source, List<CategorySelecItem> des, int level)
         {
             foreach (Category category in source)
             {
                 var prefix = string.Concat(Enumerable.Repeat("---", level));
-                des.Add(new Category()
+                des.Add(new CategorySelecItem()
                 {
                     Id = category.Id,
                     Title = prefix + " " + category.Title,
+                    level = level,
+
                 });
                 if (category.CategoryChildren?.Count > 0)
                 {
@@ -82,7 +84,7 @@ namespace MVC.Areas.Blog.Controllers
                 Id = -1,
 
             });
-            var items = new List<Category>();
+            var items = new List<CategorySelecItem>();
             CreateSelectItem(categoryList, items, 0);
             ViewData["ParentCategoryId"] = new SelectList(items, "Id", "Title");
             return View();
@@ -124,16 +126,41 @@ namespace MVC.Areas.Blog.Controllers
                                     .Include(c => c.CategoryChildren);
             var categoryList = (await appDbContext.ToListAsync())
                                     .Where(c => c.ParentCategory == null).ToList();
-            var items = new List<Category>();
-            items.Insert(0, new Category()
+
+            categoryList.Insert(0, new Category()
             {
                 Id = -1,
                 Title = "None"
             });
+            var items = new List<CategorySelecItem>();
             CreateSelectItem(categoryList, items, 0);
-            var selectList = items.Where(c => c.Id != id);
-            ViewData["ParentCategoryId"] = new SelectList(selectList, "Id", "Title", category.ParentCategoryId);
+            var categoryEditItem = items.FirstOrDefault(c => c.Id == id);
+            if (categoryEditItem != null)
+            {
+                var selectList = items.Where(c => c.Id != id && c.level < categoryEditItem.level).ToList();
+                selectList.Remove(categoryEditItem);
+                ViewData["ParentCategoryId"] = new SelectList(items, "Id", "Title", category.ParentCategoryId);
+            }
             return View(category);
+        }
+        // check parent category is valid.
+        private bool canUpdateCategory(List<Category> categories, Category category)
+        {
+            var parentCategoryId = category.ParentCategoryId;
+            if (categories.Count() == 0 || parentCategoryId == -1)
+            {
+                return true;
+            }
+            else if (categories.Count() > 0)
+            {
+                foreach (Category c in categories)
+                {
+                    if (c.Id == parentCategoryId) return false;
+                    if (c.CategoryChildren == null) continue;
+                    return canUpdateCategory(c.CategoryChildren.ToList(), category);
+                }
+            }
+            return false;
         }
 
         // POST: Blog/Edit/5
@@ -143,12 +170,20 @@ namespace MVC.Areas.Blog.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Title,Description,Slug,ParentCategoryId")] Category category)
         {
-            if (id != category.Id)
-            {
-                return NotFound();
-            }
 
-            if (ModelState.IsValid)
+            var appDbContext = (from c in _context.Categories select c)
+                                                .Include(c => c.ParentCategory)
+                                                .Include(c => c.CategoryChildren);
+            var editCategory = (await appDbContext.ToListAsync())
+                                    .FirstOrDefault(c => c.Id == id);
+            if (editCategory == null) return NotFound();
+
+            var isValid = canUpdateCategory(editCategory.CategoryChildren.ToList(), category);
+            if (!isValid)
+            {
+                Message = "Can't update with parent category is already a children of this category";
+            }
+            if (ModelState.IsValid && isValid)
             {
                 try
                 {
@@ -175,7 +210,15 @@ namespace MVC.Areas.Blog.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            ViewData["ParentCategoryId"] = new SelectList(_context.Categories, "Id", "Title", category.ParentCategoryId);
+            var items = new List<CategorySelecItem>();
+            CreateSelectItem(appDbContext.Where(c => c.CategoryChildren == null).ToList(), items, 0);
+            var categoryEditItem = items.FirstOrDefault(c => c.Id == id);
+            if (categoryEditItem != null)
+            {
+                var selectList = items.Where(c => c.Id != id && c.level < categoryEditItem.level).ToList();
+                selectList.Remove(categoryEditItem);
+                ViewData["ParentCategoryId"] = new SelectList(selectList, "Id", "Title", category.ParentCategoryId);
+            }
             return View(category);
         }
 

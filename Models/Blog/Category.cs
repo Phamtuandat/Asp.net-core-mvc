@@ -30,4 +30,10 @@ namespace App.Models.Blog
         [Display(Name = "Parent Category")]
         public Category? ParentCategory { set; get; }
     }
+
+
+    public class CategorySelecItem : Category
+    {
+        public int level { get; set; }
+    }
 }
