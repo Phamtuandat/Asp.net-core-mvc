@@ -139,7 +139,7 @@ namespace MVC.Areas.Blog.Controllers
             {
                 var selectList = items.Where(c => c.Id != id && c.level < categoryEditItem.level).ToList();
                 selectList.Remove(categoryEditItem);
-                ViewData["ParentCategoryId"] = new SelectList(items, "Id", "Title", category.ParentCategoryId);
+                ViewData["ParentCategoryId"] = new SelectList(selectList, "Id", "Title", category.ParentCategoryId);
             }
             return View(category);
         }
@@ -193,7 +193,12 @@ namespace MVC.Areas.Blog.Controllers
                         Message = "Could not update category";
                         return RedirectToAction(nameof(Index));
                     };
-                    _context.Update(category);
+                    editCategory.Title = category.Title;
+                    editCategory.Description = category.Description;
+                    editCategory.Slug = category.Slug;
+                    editCategory.ParentCategoryId = category.Id;
+                    editCategory.ParentCategoryId = category.ParentCategoryId;
+                    _context.Update(editCategory);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -219,7 +224,7 @@ namespace MVC.Areas.Blog.Controllers
                 selectList.Remove(categoryEditItem);
                 ViewData["ParentCategoryId"] = new SelectList(selectList, "Id", "Title", category.ParentCategoryId);
             }
-            return View(category);
+            return RedirectToAction(nameof(Edit));
         }
 
         // GET: Blog/Delete/5
