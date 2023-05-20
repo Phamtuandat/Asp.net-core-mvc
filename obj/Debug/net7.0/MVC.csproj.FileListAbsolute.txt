@@ -280,3 +280,6 @@ D:\ASP.NET-project\MVC\bin\Debug\net7.0\libman.json
 D:\ASP.NET-project\MVC\bin\Debug\net7.0\Bogus.dll
 D:\ASP.NET-project\MVC\bin\Debug\net7.0\AutoMapper.dll
 D:\ASP.NET-project\MVC\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\ASP.NET-project\MVC\bin\Debug\net7.0\package-lock.json
+D:\ASP.NET-project\MVC\bin\Debug\net7.0\package.json
+D:\ASP.NET-project\MVC\bin\Debug\net7.0\elFinder.NetCore.dll
