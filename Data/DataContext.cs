@@ -28,7 +28,7 @@ namespace App.Data
 
             base.OnConfiguring(optionsBuilder);
             optionsBuilder
-                  .UseNpgsql(connetionString);
+                    .UseNpgsql(connetionString);
         }
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -47,7 +47,16 @@ namespace App.Data
 
             builder.Entity<Category>(entity =>
             {
-                entity.HasIndex(c => c.Slug);
+                entity.HasIndex(c => c.Slug).IsUnique();
+            });
+            builder.Entity<PostCategory>(entity =>
+            {
+                entity.HasKey(c => new { c.CategoryID, c.PostID });
+            });
+
+            builder.Entity<Post>(entity =>
+            {
+                entity.HasIndex(c => c.Slug).IsUnique();
             });
         }
 
@@ -55,5 +64,8 @@ namespace App.Data
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<PostCategory> PostCategories { get; set; }
+        public DbSet<Post> Posts { get; set; }
     };
 }

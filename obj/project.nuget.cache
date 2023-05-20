@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nGnuGS3AYmKmlRGFVzqBgvxIFKfkVB6Ts9/0fsFzDayrpKGXIel9sVNVQWPtmv0F0b0YBboOeBU2oRb6PAJOhA==",
+  "dgSpecHash": "7CoU98HgFEnv5sLnDwpFVd2IHOdjYDFn9WIg7Jp57s9maA6F/HA6dKv9Et82vt45Kyhcgwbn1Bsr/K7yMITtbA==",
   "success": true,
   "projectFilePath": "D:\\ASP.NET-project\\MVC\\MVC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
+    "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\mailkit\\4.0.0\\mailkit.4.0.0.nupkg.sha512",

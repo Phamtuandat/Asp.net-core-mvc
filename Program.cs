@@ -14,6 +14,10 @@ builder.Services.AddIdentity<AppUser, IdentityRole>(options => options.SignIn.Re
     .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 builder.Services.AddScoped<IEmailSender, SendMailService>();
 builder.Services.Configure<MailSettings>(builder.Configuration.GetSection("MailSettings"));
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
+
 builder.Services.Configure<IdentityOptions>(options =>
 {
     // Password settings.

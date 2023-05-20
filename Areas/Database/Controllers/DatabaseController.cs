@@ -1,5 +1,7 @@
 using App.Data;
 using App.Models;
+using App.Models.Blog;
+using Bogus;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -42,7 +44,6 @@ public class DatabaseController : Controller
     public async Task<ActionResult> Migration()
     {
         await _context.Database.MigrateAsync();
-        await SeedData();
         Message = "Update database successfully!";
         return RedirectToAction(nameof(Index));
     }
@@ -72,9 +73,73 @@ public class DatabaseController : Controller
                 EmailConfirmed = true
             };
             await _userManager.CreateAsync(userAdmin, "Phamdat11a1.");
-            _logger.LogInformation(userAdmin.Email);
             await _userManager.AddToRoleAsync(userAdmin, RoleNames.Administrator);
         }
+        await SeedPostCategory();
         return RedirectToAction(nameof(Index));
+    }
+
+    private async Task SeedPostCategory()
+    {
+
+        _context.Categories.RemoveRange(_context.Categories.Where(c => c.Description.Contains("[fakeData]")));
+        _context.Posts.RemoveRange(_context.Posts.Where(p => p.Description.Contains("[fakeData]")));
+
+        var fakerCategory = new Faker<Category>();
+
+        int cm = 1;
+        fakerCategory.RuleFor(c => c.Title, fk => $"CM{cm++}" + fk.Lorem.Sentence(1, 2).Trim('.'));
+        fakerCategory.RuleFor(c => c.Description, fk => fk.Lorem.Sentence(5) + "[fakeData]");
+        fakerCategory.RuleFor(c => c.Slug, fk => fk.Lorem.Slug());
+
+        var cate = fakerCategory.Generate();
+        var cate11 = fakerCategory.Generate();
+        var cate12 = fakerCategory.Generate();
+        var cate2 = fakerCategory.Generate();
+        var cate21 = fakerCategory.Generate();
+        var cate211 = fakerCategory.Generate();
+
+        cate11.ParentCategory = cate;
+        cate12.ParentCategory = cate;
+        cate21.ParentCategory = cate2;
+        cate211.ParentCategory = cate21;
+
+        var categories = new List<Category>() { cate, cate11, cate12, cate2, cate21, cate211 };
+
+        _context.Categories.AddRange(categories);
+
+
+        var r = new Random();
+        var user = await _userManager.GetUserAsync(this.User);
+        var fakerPost = new Faker<Post>();
+        int bv = 1;
+        fakerPost.RuleFor(c => c.Title, fk => $"Post {bv++} " + fk.Lorem.Sentence(1, 2).Trim('.'));
+        fakerPost.RuleFor(c => c.Slug, fk => fk.Lorem.Slug());
+        fakerPost.RuleFor(c => c.Description, fk => fk.Lorem.Sentence(5) + "[fakeData]");
+        fakerPost.RuleFor(c => c.Content, fk => fk.Lorem.Paragraphs(7));
+        fakerPost.RuleFor(c => c.CreatAt, fk => fk.Date.Between(DateTime.SpecifyKind(DateTime.Now.AddYears(-10), DateTimeKind.Utc), DateTime.SpecifyKind(DateTime.Now, DateTimeKind.Utc)));
+        fakerPost.RuleFor(c => c.Published, fk => true);
+        fakerPost.RuleFor(c => c.AuthorId, fk => user.Id);
+
+        List<Post> posts = new();
+        List<PostCategory> postCategories = new();
+
+        for (int i = 0; i < 40; i++)
+        {
+            var post = fakerPost.Generate();
+            post.EditAt = post.CreatAt;
+            posts.Add(post);
+            postCategories.Add(new PostCategory()
+            {
+                Category = categories[r.Next(5)],
+                Post = post
+            });
+
+        }
+
+        _context.Posts.AddRange(posts);
+        _context.PostCategories.AddRange(postCategories);
+
+        _context.SaveChanges();
     }
 }
