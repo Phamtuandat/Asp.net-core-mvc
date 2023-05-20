@@ -59,6 +59,20 @@
 </div>
 
 
+@{
+    var summernote = new App.Models.Summernote("#Description");
+    var summernote2 = new App.Models.Summernote("#Content", false)
+    {
+        Hieght = 600
+    };
+}
+
+<partial name="_summernote" model="summernote" />
+<partial name="_summernote" model="summernote2" />
+
+
+
+
 @section Scripts {
 
 <script src="~/lib/multiple-select/multiple-select.min.js"></script>
