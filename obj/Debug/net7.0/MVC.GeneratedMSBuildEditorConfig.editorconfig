@@ -36,6 +36,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xDYXRlZ29yeVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[d:/ASP.NET-project/MVC/Areas/Blog/Views/Post/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xQb3N0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ASP.NET-project/MVC/Areas/Blog/Views/Post/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xQb3N0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ASP.NET-project/MVC/Areas/Blog/Views/Post/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xQb3N0XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ASP.NET-project/MVC/Areas/Blog/Views/Post/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xQb3N0XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ASP.NET-project/MVC/Areas/Blog/Views/Post/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xQb3N0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [d:/ASP.NET-project/MVC/Areas/Blog/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQmxvZ1xWaWV3c1xfVmlld0ltcG9ydHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -244,26 +264,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/ASP.NET-project/MVC/Views/Blog/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[d:/ASP.NET-project/MVC/Views/Blog/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[d:/ASP.NET-project/MVC/Views/Blog/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[d:/ASP.NET-project/MVC/Views/Blog/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[d:/ASP.NET-project/MVC/Views/Blog/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [d:/ASP.NET-project/MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -290,6 +290,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [d:/ASP.NET-project/MVC/Views/Shared/_PagingXTL.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9QYWdpbmdYVEwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[d:/ASP.NET-project/MVC/Views/Shared/_Summernote.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdW1tZXJub3RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [d:/ASP.NET-project/MVC/Views/Shared/_ValidationScriptsPartial.cshtml]

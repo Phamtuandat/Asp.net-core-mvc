@@ -1,0 +1,18 @@
+@model App.Models.Summernote
+
+@if (Model.LoadLib)
+{
+    <script src="~/lib/summernote/summernote-bs5.min.js"></script>
+    <link rel="stylesheet" href="~/lib/summernote/summernote-bs5.min.css">
+}
+
+<script>
+    $(document).ready(function () {
+        $('@Model.IDEditor').summernote({
+            placeholder: 'Hello stand alone ui',
+            tabsize: 2,
+            height: @Model.Hieght,
+            toolbar: @Html.Raw(Model.ToolBar)
+        });
+    })
+</script>

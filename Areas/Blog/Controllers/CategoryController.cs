@@ -6,7 +6,7 @@ using App.Data;
 using App.Models.Blog;
 using Microsoft.AspNetCore.Authorization;
 
-namespace MVC.Areas.Blog.Controllers
+namespace App.Areas.Blog.Controllers
 {
     [Area("Blog")]
     [Route("admin/blog/Category/[action]/{id?}")]

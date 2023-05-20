@@ -277,3 +277,6 @@ D:\ASP.NET-project\MVC\obj\Debug\net7.0\MVC.pdb
 D:\ASP.NET-project\MVC\obj\Debug\net7.0\MVC.genruntimeconfig.cache
 D:\ASP.NET-project\MVC\obj\Debug\net7.0\ref\MVC.dll
 D:\ASP.NET-project\MVC\bin\Debug\net7.0\libman.json
+D:\ASP.NET-project\MVC\bin\Debug\net7.0\Bogus.dll
+D:\ASP.NET-project\MVC\bin\Debug\net7.0\AutoMapper.dll
+D:\ASP.NET-project\MVC\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
