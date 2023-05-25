@@ -1,0 +1,74 @@
+@model Post
+@using App.Components
+
+@{
+  var categories = ViewBag.categories as List<Category>;
+  List<Post> relatedPost = ViewBag.relatedPost;
+  var category = Model.PostCategories.FirstOrDefault()?.Category;
+}
+
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item" aria-current="page"><a asp-action="Index" asp-area="Blog"
+        asp-route-categorySlug="">Home</a></li>
+    @if (category != null)
+    {
+      foreach (var item in category.ParentCategories())
+      {
+        <li class="breadcrumb-item" aria-current="page">
+          <a asp-action="Index" asp-area="Blog" asp-route-categorySlug="@item.Slug">@item.Title</a>
+        </li>
+
+      }
+      <li class="breadcrumb-item active" aria-current="page">
+        <a asp-action="Index" asp-area="Blog" asp-route-categorySlug="@category.Slug"> @category.Title</a>
+      </li>
+      <li class="breadcrumb-item active" aria-current="page">
+        @Model.Title
+      </li>
+    }
+  </ol>
+</nav>
+<div>
+
+  <h1>
+    @Model.Title
+
+  </h1>
+  <div class="d-flex gap-2">
+    <div>
+      <strong>
+        Author:
+      </strong>
+      <span>@Model.Author.UserName</span>
+    </div>
+    |
+    <div>
+      <strong>
+        Create:
+      </strong>
+      <span>@Model.CreatAt</span>
+    </div>
+  </div>
+  <hr>
+  @Model.Content
+</div>
+
+
+@section SideBar{
+@await Component.InvokeAsync("App.Components.CategorySideBar", new CategorySideBar.CategorySideBarData()
+{
+categories = categories,
+Level = 0,
+categorySlug = category.Slug
+})
+<ul class="list-group">
+  @foreach (var item in relatedPost)
+  {
+  <li class="list-group-item">
+    <a asp-action="Detail" asp-area="Blog" asp-controller="ViewPost" asp-route-postSlug="@item.Slug">@item.Title</a>
+  </li>
+  }
+</ul>
+}

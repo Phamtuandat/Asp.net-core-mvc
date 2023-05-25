@@ -1,0 +1,72 @@
+@model IEnumerable<Category>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<partial name="_AlertMessage" />
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Slug)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParentCategory)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            await RenderCategoryAsync(item, 0);
+        }
+    </tbody>
+</table>
+
+@{
+    async Task RenderCategoryAsync(Category category, int level)
+    {
+        var prefix = string.Concat(Enumerable.Repeat("&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;", level));
+        <tr>
+            <td>
+                <a asp-action="Details" class="text-decoration-none" asp-route-id="@category.Id"> @Html.Raw(prefix)
+                    @Html.DisplayFor(modelItem =>
+            category.Title)
+                </a>
+
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => category.Slug)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => category.ParentCategory.Title)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@category.Id">Edit</a> |
+
+                <a asp-action="Delete" asp-route-id="@category.Id">Delete</a>
+            </td>
+        </tr>
+        if (category.CategoryChildren?.Count > 0)
+        {
+            foreach (var item in category.CategoryChildren)
+            {
+                {
+                    await RenderCategoryAsync(item, level + 1);
+                }
+            }
+        }
+    }
+}
