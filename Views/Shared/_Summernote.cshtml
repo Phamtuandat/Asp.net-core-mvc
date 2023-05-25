@@ -26,7 +26,6 @@
         }
     }(function ($) {
         $.extend($.summernote.plugins, {
-            // Tạo plugin tên elfinder  
             'elfinder': function (context) {
                 var self = this;
                 // ui has renders to build ui elements.
@@ -37,7 +36,6 @@
                         contents: '<i class="note-icon-picture"/> elFinder',
                         tooltip: 'Quản lý file',
                         click: function () {
-                            // Bấm vào nút bấm gọi hàm elfinderDialog   
                             elfinderDialog(context);
                         }
                     });

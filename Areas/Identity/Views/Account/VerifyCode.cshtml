@@ -1,10 +1,8 @@
 ﻿@model VerifyCodeViewModel
 @{
 
-    ViewData["Title"] = "Xác thực";
 }
 
-<h1>@ViewData["Title"].</h1>
 
 <form asp-controller="Account" asp-action="VerifyCode" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post"
     class="form-horizontal" role="form">
@@ -30,7 +28,7 @@
     </div>
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <button type="submit" class="btn btn-warning">Gửi</button>
+            <button type="submit" class="btn btn-warning">Sent</button>
         </div>
     </div>
 </form>

@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3VzW6sOwwCm0KtGkBqfjQHp9/E6kwBozzGLNzmyzSVjFIUorUNM52OfY5z7QQIWhCfPXtU2auqqO7K/5DGVIhg==",
+  "dgSpecHash": "iGLBlL8YgiI43qCcsMMyv/Q/KddlcN5xdmLApgL+EjtyPpW7ztbA9lgOy/SqbIQXzzXM4JPXk2vlVxVyZ/lSHA==",
   "success": true,
   "projectFilePath": "D:\\ASP.NET-project\\MVC\\MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\bootstrap\\5.2.3\\bootstrap.5.2.3.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\elfinder.netcore\\1.3.6\\elfinder.netcore.1.3.6.nupkg.sha512",
     "C:\\Users\\Pham Tuan Dat\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

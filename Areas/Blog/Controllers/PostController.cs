@@ -7,7 +7,6 @@ using App.Areas.Blog.Models;
 using Microsoft.AspNetCore.Identity;
 using App.Utilities;
 using AutoMapper;
-using App.Models.Blog;
 
 namespace App.Areas.Blog.Controllers
 {
